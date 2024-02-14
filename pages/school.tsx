@@ -8,8 +8,6 @@ import { Title, Center, Text, Box, Grid, Container, Pagination } from '@mantine/
 import useMediaQueries from '../components/useMediaQueries';
 import getItemsPerPage  from '../components/itemsPerPage';
 import styles from './styles.module.css';
-import { exec } from 'child_process';
-import { useRouter } from 'next/router';
 
 function School() {
 
@@ -22,37 +20,12 @@ function School() {
   const [filteredBooks, setFilteredBooks] = useState<any[]>([]);
   const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage(screenSize));
   const [loading, setLoading] = useState(true);
-
-  const router = useRouter();
   
   useEffect(() => {
     // Initialize itemsPerPage with the correct value based on screen size
     setItemsPerPage(getItemsPerPage(screenSize));
   }, [screenSize]);
 
-   // Use the useEffect hook to fetch data when the component mounts
-   {/*useEffect(() => {
-    // Define a function to fetch books from the server
-    const fetchBooksData = async () => {
-      try {
-        // Make a GET request to your server's /books endpoint
-        const response = await fetch('http://localhost:5000/books');
-        const data = await response.json();
-
-        // Update the state with the fetched data
-        setBooksData(data);
-        setFilteredBooks(data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching books:', error);
-      }
-    };
-
-    // Call the fetchBooks function
-    fetchBooksData();
-   
-  }, []);*/} // The empty dependency array ensures that the effect runs only once when the component mounts
- 
   useEffect(() => {
     // Fetch books data when the component mounts
     const fetchBooksData = async () => {
