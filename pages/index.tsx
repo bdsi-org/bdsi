@@ -23,6 +23,7 @@ export default function IndexPage() {
   const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage(screenSize));
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
     // Initialize itemsPerPage with the correct value based on screen size
     setItemsPerPage(getItemsPerPage(screenSize));
