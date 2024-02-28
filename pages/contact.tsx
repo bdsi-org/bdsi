@@ -2,9 +2,10 @@
 import React from 'react';
 import EasyHeader from '../components/EasyHeader';
 import Footer from '../components/Footer';
-import { Title, Image, Text, Box, Paper, Container} from '@mantine/core';
+import { Title, Image, Text, Box, Paper, Flex, Container} from '@mantine/core';
 import useMediaQueries from '../components/useMediaQueries';
 import styles from './styles.module.css';
+
 
 function Contact () {
 
@@ -16,9 +17,7 @@ function Contact () {
     };
 
   return (
-    <>
-    {/* Fixed Header */}
-    
+  <>  
 <div >
       <EasyHeader/>    
 </div>  
@@ -52,20 +51,42 @@ function Contact () {
       p='10px' size="sm" ta="center" >
        Rahubadde Sarath-Chandra
       </Text>
-      <Box style={{ margin: 'auto', display: 'flex', flexDirection: 'row', maxWidth: '1000px' }}> 
+
+      {screenSize === 'small' ? (
+        <div>
+      <Box style={{ margin: 'auto', maxWidth: '1000px', justifyContent: 'center', display: 'flex', flexDirection: 'row' }}> 
       <Text p='3px' size="sm" ta="center" c="teal.7">
       Email:  
       </Text>
       <a href="mailto:infoqsa@gmail.com" color="blue" style={{ marginLeft: '5px' }}>
       infoqsa@gmail.com
         </a>
-        <Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
-        Mobile:   
-      </Text>
-        <a href="tel:+61732789021" color="blue" style={{ marginLeft: '5px' }}>
-           (+61) 732 789 021
-        </a>
+        </Box>
+        <Box style={{ margin: 'auto', justifyContent: 'center', display: 'flex', flexDirection: 'row', maxWidth: '1000px' }}>
+<Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
+Mobile:   
+</Text>
+<a href="tel:+61732789021" color="blue" style={{ marginLeft: '5px' }}>
+   (+61) 732 789 021
+</a>
       </Box>
+      </div>
+      ) : ( <div>
+        <Box style={{ margin: 'auto', maxWidth: '1000px', justifyContent: 'center', display: 'flex', flexDirection: 'row' }}> 
+        <Text p='3px' size="sm" ta="center" c="teal.7">
+      Email:  
+      </Text> 
+      <a href="mailto:infoqsa@gmail.com" color="blue" style={{ marginLeft: '5px' }}>
+      infoqsa@gmail.com
+        </a>
+        <Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
+Mobile:   
+</Text>
+<a href="tel:+61732789021" color="blue" style={{ marginLeft: '5px' }}>
+   (+61) 732 789 021
+</a>
+        </Box>
+      </div>)}
      
       <Image radius="md" h={200}
       w={200}
@@ -79,20 +100,42 @@ function Contact () {
       p='10px' size="sm" ta="center" >
       Tanuja Yasanga Sarath-Chandra
       </Text>
-      <Box style={{ margin: 'auto', display: 'flex', flexDirection: 'row', maxWidth: '1000px' }}> 
+
+      {screenSize === 'small' ? (
+        <div>
+      <Box style={{ margin: 'auto', maxWidth: '1000px', justifyContent: 'center', display: 'flex', flexDirection: 'row' }}> 
       <Text p='3px' size="sm" ta="center" c="teal.7">
-      Email:   
+      Email:  
       </Text>
       <a href="mailto:tanuja4@gmail.com" color="blue" style={{ marginLeft: '5px' }}>
       tanuja4@gmail.com
         </a>
-        <Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
-        Mobile:   
-      </Text>
-        <a href="tel:+61413485411" color="blue" style={{ marginLeft: '5px' }}>
-           (+61) 413 485 411
-        </a>
+        </Box>
+        <Box style={{ margin: 'auto', justifyContent: 'center', display: 'flex', flexDirection: 'row', maxWidth: '1000px' }}>
+<Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
+Mobile:   
+</Text>
+<a href="tel:+61413485411" color="blue" style={{ marginLeft: '5px' }}>
+(+61) 413 485 411
+</a>
       </Box>
+      </div>
+      ) : ( <div>
+        <Box style={{ margin: 'auto', maxWidth: '1000px', justifyContent: 'center', display: 'flex', flexDirection: 'row' }}> 
+        <Text p='3px' size="sm" ta="center" c="teal.7">
+      Email:  
+      </Text> 
+      <a href="mailto:tanuja4@gmail.com" color="blue" style={{ marginLeft: '5px' }}>
+      tanuja4@gmail.com
+        </a>
+        <Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
+Mobile:   
+</Text>
+<a href="tel:+61413485411" color="blue" style={{ marginLeft: '5px' }}>
+(+61) 413 485 411
+</a>
+        </Box>
+      </div>)}
 
       <Title order={5} c='blue' p='10' ta="center">IT Specialists:</Title>
       <Image radius="md" w={200} h={200}
@@ -102,40 +145,83 @@ function Contact () {
       p='10px' size="sm" ta="center">
       Dhanuja Prathapa Ranawake
       </Text>
-      <Box style={{ margin: 'auto', display: 'flex', flexDirection: 'row', maxWidth: '1000px' }}> 
+
+      {screenSize === 'small' ? (
+        <div>
+      <Box style={{ margin: 'auto', maxWidth: '1000px', justifyContent: 'center', display: 'flex', flexDirection: 'row' }}> 
       <Text p='3px' size="sm" ta="center" c="teal.7">
-      Email:   
+      Email:  
       </Text>
       <a href="mailto:dhanujaprathapa@gmail.com" color="blue" style={{ marginLeft: '5px' }}>
       dhanujaprathapa@gmail.com
         </a>
-        <Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
-        Mobile:   
-      </Text>
-        <a href="tel:+61472511125" color="blue" style={{ marginLeft: '5px' }}>
-           (+61) 472 511 125
-        </a>
+        </Box>
+        <Box style={{ margin: 'auto', justifyContent: 'center', display: 'flex', flexDirection: 'row', maxWidth: '1000px' }}>
+<Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
+Mobile:   
+</Text>
+<a href="tel:+61472511125" color="blue" style={{ marginLeft: '5px' }}>
+(+61) 472 511 125
+</a>
       </Box>
+      </div>
+      ) : ( <div>
+        <Box style={{ margin: 'auto', maxWidth: '1000px', justifyContent: 'center', display: 'flex', flexDirection: 'row' }}> 
+        <Text p='3px' size="sm" ta="center" c="teal.7">
+      Email:  
+      </Text> 
+      <a href="mailto:dhanujaprathapa@gmail.com" color="blue" style={{ marginLeft: '5px' }}>
+      dhanujaprathapa@gmail.com
+        </a>
+        <Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
+Mobile:   
+</Text>
+<a href="tel:+61472511125" color="blue" style={{ marginLeft: '5px' }}>
+(+61) 472 511 125
+</a>
+        </Box>
+      </div>)}
 
       <Image radius="md" w={200} h={200}
       fit="contain" src='Neil.png' alt='Neil' mx="auto" mt='10px'/>
       <Text
       p='10px' size="sm" ta="center">Neil Ranawake</Text>
-      
-      <Box style={{ margin: 'auto', display: 'flex', flexDirection: 'row', maxWidth: '1000px' }}> 
+
+      {screenSize === 'small' ? (
+        <div>
+      <Box style={{ margin: 'auto', maxWidth: '1000px', justifyContent: 'center', display: 'flex', flexDirection: 'row' }}> 
       <Text p='3px' size="sm" ta="center" c="teal.7">
-      Email:   
+      Email:  
       </Text>
       <a href="mailto:neilranawake@yahoo.com" color="blue" style={{ marginLeft: '5px' }}>
       neilranawake@yahoo.com
         </a>
-        <Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
-        Mobile:   
-      </Text>
-        <a href="tel:+94719707828" color="blue" style={{ marginLeft: '5px' }}>
-           (+94) 71 970 7828
-        </a>
+        </Box>
+        <Box style={{ margin: 'auto', justifyContent: 'center', display: 'flex', flexDirection: 'row', maxWidth: '1000px' }}>
+<Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
+Mobile:   
+</Text>
+<a href="tel:+94719707828" color="blue" style={{ marginLeft: '5px' }}>
+(+94) 71 970 7828
+</a>
       </Box>
+      </div>
+      ) : ( <div>
+        <Box style={{ margin: 'auto', maxWidth: '1000px', justifyContent: 'center', display: 'flex', flexDirection: 'row' }}> 
+        <Text p='3px' size="sm" ta="center" c="teal.7">
+      Email:  
+      </Text> 
+      <a href="mailto:neilranawake@yahoo.com" color="blue" style={{ marginLeft: '5px' }}>
+      neilranawake@yahoo.com
+        </a>
+        <Text p='3px' size="sm" ta="center" c="teal.7" style={{ marginLeft: '10px' }}>
+Mobile:   
+</Text>
+<a href="tel:+94719707828" color="blue" style={{ marginLeft: '5px' }}>
+(+94) 71 970 7828
+</a>
+        </Box>
+      </div>)}
     </Container>
     
     <Container style={{ margin: 'auto', marginTop:'20px', marginBottom:'30px', display: 'flex', flexDirection: 'column', maxWidth: '800px' }}>
@@ -154,7 +240,7 @@ function Contact () {
 
       </div>
       </div>
-    </>
+   </>
   )
 }
 export default Contact;
