@@ -139,7 +139,7 @@ const data = [
   {
     image:
       'social.jpg',
-    title: 'Social welfare is a type of government support intended to ensure that members of a society can meet basic human needs. But this a field that is globally and broadly used for religious communication',
+    title: 'Social welfare is a type of government support intended to ensure that members of a society can meet basic human needs. But this field is globally and broadly used for religious communication',
     category: 'social welfare',
   },
 ];
