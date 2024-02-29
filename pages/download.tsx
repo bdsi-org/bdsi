@@ -1,8 +1,9 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import { Title } from "@mantine/core";
 import BookDownload, {BookProps} from "../components/bookDownload";
 
-function download() {
+function Download() {
 
     const [books, setBooks] = useState<BookProps[]>([]);
 
@@ -27,8 +28,8 @@ function download() {
   return (
     <div>
         <Title>Books Download Count </Title>
-        {books.map((book) => (
-        <BookDownload key={book.id} book={book} />
+        {books.map((book, index) => (
+        <BookDownload key={index}  book={book as BookProps['book']} />
       ))}
 
     </div>
@@ -37,4 +38,4 @@ function download() {
   )
 }
 
-export default download
+export default Download

@@ -6,8 +6,8 @@ import styles from '../pages/styles.module.css';
 
 export interface BookProps {
   book: {
-    id: number;
-    count: number;
+    id?: number | null;
+    count?: number | null;
     title?: string | null;
     author?: string | null;
     genre?: string | null;
@@ -18,7 +18,7 @@ export interface BookProps {
 }
 
 
-const BookDownload: React.FC<BookProps> = ({ book }) => {
+const BookDownload: React.FC<{ book: BookProps['book'] }> = ({ book }) => {
 
   const [bookDetails, setBookDetails] = useState<any>(null);
 
