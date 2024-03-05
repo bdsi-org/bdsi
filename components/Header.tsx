@@ -66,7 +66,7 @@ const headerStyle = useMemo(() => {
 
     useEffect(() => {
       // Fetch book titles from the server when the component mounts
-      fetch('http://localhost:5000/books/:id/title')
+      fetch('https://api.buddhadhammaschool.org/books/:id/title')
         .then((response) => response.json())
         .then((data) => setBooks(data))
         .catch((error) => console.error('Error fetching book titles:', error));

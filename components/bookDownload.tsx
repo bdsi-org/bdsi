@@ -25,7 +25,7 @@ const BookDownload: React.FC<{ book: BookProps['book'] }> = ({ book }) => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/books/${book.id}`);
+        const response = await fetch(`https://api.buddhadhammaschool.org/books/${book.id}`);
         if (response.ok) {
           const data = await response.json();
           setBookDetails(data);

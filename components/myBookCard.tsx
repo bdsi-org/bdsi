@@ -25,7 +25,7 @@ const Book: React.FC<BookProps> = ({ book }) => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/myBooks/${book.id}`);
+        const response = await fetch(`https://api.buddhadhammaschool.org/myBooks/${book.id}`);
         if (response.ok) {
           const data = await response.json();
           setBookDetails(data);
@@ -51,14 +51,14 @@ const Book: React.FC<BookProps> = ({ book }) => {
   const handleDownload = async () => {
     try {
       // Fetch the current count from the server
-      const response = await fetch(`http://localhost:5000/myBooks/${book.id}/count`);
+      const response = await fetch(`https://api.buddhadhammaschool.org/myBooks/${book.id}/count`);
       const data = await response.json();
   
       if (response.ok) {
         // Increment the count and send it back to the server
         const updatedCount = data.count + 1;
   
-        const updateResponse = await fetch(`http://localhost:5000/myBooks/${book.id}/count`, {
+        const updateResponse = await fetch(`https://api.buddhadhammaschool.org/myBooks/${book.id}/count`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

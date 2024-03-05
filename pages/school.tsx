@@ -30,7 +30,7 @@ function School() {
     // Fetch books data when the component mounts
     const fetchBooksData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/books');
+        const response = await fetch('https://api.buddhadhammaschool.org/books');
         const data = await response.json();
         setBooksData(data);
         setFilteredBooks(data);

@@ -3,7 +3,7 @@
 }
 
 /* Larger screens */
-@media (max-width: 2000px) and (min-width: 1399px) {
+@media (min-width: 1399px) {
   .card {
     min-width: 1399px;
     max-width: 1399px;
@@ -45,7 +45,7 @@
   }
 }
  
-@media (max-width: 2000px) and (min-width: 769px) {
+@media (min-width: 769px) {
  .title {
     font-family:
       Greycliff CF,
